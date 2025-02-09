@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000
 
 // Middlewares
 app.use(express.json())
+app.use(express.static(join(__dirname, "public")))
 
 // configuracion ejs
 app.set("view engine", "ejs")
@@ -20,5 +21,7 @@ app.set("views", join(__dirname, "views"))
 app.get("/", (req, res) => {
     res.render("index")
 })
+
+
 
 app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`))

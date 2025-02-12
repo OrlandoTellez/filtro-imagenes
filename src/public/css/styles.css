@@ -36,12 +36,12 @@ body{
   }
   
   .upload-area:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgb(229, 228, 228);
   }
   
-  .upload-area.dragover {
+  .dragover {
     border-color: #555;
-    background-color: #f9f9f9f;
+    background-color:rgb(229, 228, 228);
   }
   
   .preview-image {

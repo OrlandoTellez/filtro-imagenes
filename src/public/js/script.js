@@ -3,6 +3,8 @@ const $ = (e) => document.querySelector(e)
 const $uploadArea = $(".upload-area")
 const $inputFile = $("#file-image")
 const $imagePreview = $("#image-preview")
+const $btnReiniciar = $(".btn-reiniciar")
+const $btnDescargar = $(".btn-descargar")
 
 $uploadArea.addEventListener("click", () => {
     $inputFile.click()
@@ -29,10 +31,16 @@ $uploadArea.addEventListener("drop", (e) => {
 
     if(files.length > 0){
         handleFiles(files)
+        $btnReiniciar.hidden = false
+        $btnDescargar.hidden = false
+        editarImagen()
     }
 })
 
 //funciones
+const editarImagen = () => {
+    return 
+}
 
 const handleFiles = (files) => {
     const file = files[0]

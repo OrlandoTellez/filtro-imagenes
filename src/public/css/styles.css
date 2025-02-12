@@ -92,4 +92,5 @@ label{
 
 input[type="range"]{
   width: 100%;
+  accent-color: #e11d48;
 }

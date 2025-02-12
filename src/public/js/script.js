@@ -49,7 +49,7 @@ const editarImagen = () => {
      <small>Ajusta los filtros de tu imagen</small>
     <div class="filters">
         <label for="brillo">
-            brillo
+            Brillo
             <input type="range" name="brillo" id="brillo">
         </label>
         <label for="contraste">

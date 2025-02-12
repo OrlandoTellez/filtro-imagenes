@@ -37,9 +37,37 @@ $uploadArea.addEventListener("drop", (e) => {
     }
 })
 
+const $contenedorSection = $(".container-section")
+
 //funciones
 const editarImagen = () => {
-    return 
+    const contenedor = document.createElement("article")
+    contenedor.classList.add("filters-container")
+
+    contenedor.innerHTML = `
+     <h2>Filtros</h2>
+     <small>Ajusta los filtros de tu imagen</small>
+    <div class="filters">
+        <label for="brillo">
+            brillo
+            <input type="range" name="brillo" id="brillo">
+        </label>
+        <label for="contraste">
+            Contraste
+            <input type="range" name="contraste" id="contraste">
+        </label>
+        <label for="saturacion">
+            Saturación
+            <input type="range" name="saturacion" id="saturacion">
+        </label>
+        <label for="desenfoque">
+            Desenfoque
+            <input type="range" name="desenfoque" id="desenfoque">
+        </label>
+    </div>
+    `
+    $contenedorSection.appendChild(contenedor)
+
 }
 
 const handleFiles = (files) => {

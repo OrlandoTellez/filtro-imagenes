@@ -1,7 +1,7 @@
 ```markdown
 # Editor de Imágenes con Filtros
 
-![Interfaz de la aplicación](img/imagen-proyecto.png) 
+![Interfaz de la aplicación](/img/imagen-proyecto.png) 
 
 Aplicación web para aplicar filtros a imágenes directamente desde el navegador. Permite ajustar brillo, contraste, saturación y desenfoque, con opción de descargar la imagen modificada.
 

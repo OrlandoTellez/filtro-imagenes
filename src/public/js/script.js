@@ -136,3 +136,21 @@ const displayImage = (file) => {
     reader.readAsDataURL(file)
 }
 
+const descargarImagen = () => {
+    const canvas = document.createElement("canvas")
+    const ctx = canvas.getContext("2d")
+
+    canvas.width = $imagePreview.naturalWidth
+    canvas.height = $imagePreview.naturalHeight
+
+    ctx.filter = $imagePreview.style.filter
+    ctx.drawImage($imagePreview, 0, 0, canvas.width, canvas.height)
+
+    const link = document.createElement("a")
+    link.download = "imagen-editada.png"
+    link.href = canvas.toDataURL("image/png")
+    link.click()
+}
+
+$btnDescargar.addEventListener("click", descargarImagen)
+

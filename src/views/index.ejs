@@ -8,22 +8,33 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <div class="container">
+    <article>
         <h1>Editor de imágenes</h1>
         <p>Suba una imagen y aplique filtros</p>
-
-        <div>
-            <div class="upload-area">
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-upload"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /><path d="M7 9l5 -5l5 5" /><path d="M12 4l0 12" /></svg>
-                <img src="" width="300px" id="image-preview" alt="">
-                <input type="file" name="image" id="file-image"  accept="image/jpeg, 
-                image/png" required hidden>
-                <small>Arrastra y suelta tu imagen aquí</small>
+    </article>
+    <div class="container">
+        <div style="width: 100%;">
+            <div class="upload-container">
+                <div class="upload-area">
+                    <svg  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-upload"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /><path d="M7 9l5 -5l5 5" /><path d="M12 4l0 12" /></svg>
+                    <input type="file" name="image" id="file-image"  accept="image/jpeg, 
+                    image/png" required hidden>
+                    <small>Arrastra y suelta tu imagen aquí</small>
+                </div>
+                
+                <picture>
+                    <img src="" id="image-preview" alt="imagen">
+                </picture>
+                
             </div>
-            <button class="btn-reiniciar" type="button" hidden>Reiniciar</button>
-            <button class="btn-descargar" type="button" hidden>Descargar</button>
+            <div class="buttons">
+                <button class="btn-reiniciar" type="button" hidden>Reiniciar</button>
+                <button class="btn-descargar" type="button" hidden>Descargar</button>
+            </div>
         </div>
-        <section class="container-section">
+        
+        
+        <section class="container-section" hidden>
         </section>
     </div>
 </body>

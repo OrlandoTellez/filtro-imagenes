@@ -5,6 +5,8 @@ const $inputFile = $("#file-image")
 const $imagePreview = $("#image-preview")
 const $btnReiniciar = $(".btn-reiniciar")
 const $btnDescargar = $(".btn-descargar")
+const $contenedor = $(".container")
+const $contenedorImagen = $("picture")
 
 $uploadArea.addEventListener("click", () => {
     $inputFile.click()
@@ -25,7 +27,7 @@ $uploadArea.addEventListener("dragleave", () => {
 //Drop
 $uploadArea.addEventListener("drop", (e) => {
     e.preventDefault()
-    $uploadArea.classList.remove("dragover")
+    $uploadArea.classList.add("hidden")
 
     const files = e.dataTransfer.files
 
@@ -33,6 +35,10 @@ $uploadArea.addEventListener("drop", (e) => {
         handleFiles(files)
         $btnReiniciar.hidden = false
         $btnDescargar.hidden = false
+        $contenedorSection.hidden = false
+        $contenedor.style.display = "flex"
+        $contenedorImagen.style.display = "flex"
+        document.body.style.height = "100%"
         editarImagen()
     }
 })

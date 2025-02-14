@@ -147,3 +147,21 @@ input[type="range"]{
 .hidden{
   display: none;
 }
+
+@media only screen and (max-width: 1024px){
+  .container{
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .buttons{
+    justify-content: center;
+  }
+
+  #image-preview {
+    max-height: 80%;
+    max-width: 80%;
+    object-fit: contain; 
+  }
+  
+}
